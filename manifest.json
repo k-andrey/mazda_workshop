@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "Workshop Link fix Extension",
+  "version": "0.0.1",
+  "description": "Фикс линков для WorkShop Manual Mazda",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon.png"
+  },
+  "author": "andryxa0635",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://euroesi.mazda.co.jp/scripts/*"
+      ],
+      "js": [
+        "jquery-3.6.0.min.js",
+        "content.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": ["like.svg"],
+  "permissions": ["storage"]
+}
